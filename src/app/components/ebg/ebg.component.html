@@ -1,0 +1,257 @@
+
+<!------ Include the above in your HEAD tag ---------->
+		<div class="container-fluid">
+			<div style="text-align: center">
+			    <h1>Electronics Buyers Guide</h1>
+			</div>
+		</div>
+
+
+        <div class="container ebgformcontainer">
+        		<div class="col-sm-12 ebheadinglabel">
+                        <label>Please Specify the following motor specifications</label>
+                </div>
+
+            <div class="row">
+                <form class="form-horizontal" role="form">
+                   <div class="col-sm-6 ebgformleftcontainer">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-4 control-label">NEMA / IEC:</label>
+						  <select class="form-control" id="sel1">
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Frequency:</label>
+		                <select (change)="selectedFrequency($event)" class="form-control">
+		                	<option selected value="Select">Select</option>
+						    <option value="Variable">Variable</option>
+						    <option value="50">50</option>
+						    <option value="60">60</option>
+  						</select>
+
+
+                       <!--<select [(ngModel)]= "selectedValue" (change) = "selectedFrequency($event)" class="form-control">
+						    <option *ngFor="let freqVal of data" [ngValue]="freqVal" name="freqVal">
+						    	{{freqVal.name}}
+							</option>
+						  </select> <select [(ngModel)]= "selectedValue" (change) = "selectedFrequency()"	class="form-control">
+						    <option value="Variable">Variable</option>
+						    <option value="50">50</option>
+						    <option value="60">60</option>
+						  </select>
+						   -->
+                        <span class="hzStyle">HZ</span>
+                    </div>  
+
+                </div>
+                
+                <div class="col-sm-6 ebgformrightcontainer">
+                    <!--<div class="form-group">
+                        <label for="name" class="col-sm-4 control-label"># of Speeds:</label>
+						  <select class="form-control">
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+                    </div>   -->        		
+                    <div class="form-group" *ngIf="selectedValue === 'Variable' == false ">
+                        <label for="name" class="col-sm-4 control-label">Output(HP):</label>
+						  <select class="form-control">
+						    <option>Select</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+						  <select class="form-control hpSelect" >
+						    <option>HP</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+                    </div> 
+
+                    <div class="form-group" *ngIf="selectedValue === 'Variable'">
+                        <label for="name" class="col-sm-4 control-label">Output(HP):</label>
+						 <input type="text" />
+                    </div>
+                    
+                </div>
+
+				<div class="col-md-12 speedShowContainer" *ngIf="selectedValue === 'Variable'">
+                    	<div class="minmaxLabels">
+                    		<div>
+								<!--<button type="button" class="btn btn-primary">Mod Shop Possibility</button> -->
+							</div>
+
+							<div>
+								<span class="min">Min</span>
+								<span>-</span>
+								<span>Max</span>			
+							</div>
+						</div>
+		                <div class="form-group">
+	                        <label for="name" class="col-sm-4 control-label">
+	                        	<input type="radio" name="frequencyRange">VT RPM Range:
+	                        </label>
+							  <input type="text" />
+							  <span class="dash">-</span>
+							  <input type="text" />
+							  <span class="orText">Or</span>
+	                    </div>   
+	                    <div class="form-group">
+	                        <label for="name" class="col-sm-4 control-label">
+	                        	<input type="radio" name="frequencyRange">CT RPM Range:
+	                        </label>
+							  <input type="text" />
+							  <span class="dash">-</span>
+							  <input type="text" />
+							  <span class="orText">Or</span>
+	                    </div>   
+	                    <div class="form-group">
+	                        <label for="name" class="col-sm-4 control-label">
+	                        	<input type="radio" name="frequencyRange">CHP RPM Range:
+	                        </label>
+							  <input type="text" />
+							  <span class="dash">-</span>
+							  <input type="text" />
+							  <span class="orText">Optional When Required</span>
+	                    </div>                 		
+                    </div>
+
+                    <!--<div class="col-md-12 frequencyNumberContainer" 
+                    *ngIf="selectedValue === '50'">
+                    	<div class="col-md-6">       
+			                    <div class="form-group">
+			                        <label for="name" class="col-sm-4 control-label">Source Frequency:</label>
+									  <select class="form-control" >
+									    <option>1</option>
+									    <option>2</option>
+									    <option>3</option>
+									    <option>4</option>
+									  </select>
+			                    </div>   
+			                    <div class="form-group">
+			                        <label for="name" class="col-sm-4 control-label">Shaft Orientation:</label>
+									  <select class="form-control" id="sel1">
+									    <option>1</option>
+									    <option>2</option>
+									    <option>3</option>
+									    <option>4</option>
+									  </select>
+			                    </div>
+                    	</div>
+                    	<div class="col-md-6">          		
+		                    <div class="form-group">
+		                        <label for="name" class="col-sm-4 control-label">Output(HP):</label>
+								  <input type="text">
+		                    </div>
+                    	</div>
+                    </div>-->
+
+		<div class="voltageContainer">
+                <div class="col-sm-6">
+                    <div class="form-group" *ngIf="selectedValue === 'Variable' == false">
+                        <label for="name" class="col-sm-4 control-label syn">Synch RPM:</label>
+						  <select class="form-control syncSelect">
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+                    </div>      
+                    <div class="form-group"  *ngIf="selectedValue === 'Variable' == true">
+                        <label for="name" class="col-sm-4 control-label source">Source Frequency:</label>
+						  <select class="form-control sourceSlect" >
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+                    </div>
+                </div>
+               
+				<div class="col-md-12 speedShowContainer">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-4 control-label">Voltage:</label>
+						  <select class="form-control voltageSelect">
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+                    </div>
+                    <div class="form-group">
+	                        <label for="name" class="col-sm-4 control-label">
+	                        	<input type="radio" name="voltageRange">Single Voltage:
+	                        </label>
+							  <input type="text" />
+							  <span class="orText">V</span>
+	                    </div> 
+		                <div class="form-group">
+	                        <label for="name" class="col-sm-4 control-label">
+	                        	<input type="radio" name="voltageRange">Dual Voltage:
+	                        </label>
+							  <input type="text" />
+							  <span class="dash">/</span>
+							  <input type="text" />
+							  <span class="orText">V</span>
+	                    </div>       
+	                    <div class="form-group">
+	                        <label for="name" class="col-sm-4 control-label">
+	                        <input type="radio" name="voltageRange">Enclosure & IP, IC Codes:</label>
+							  <select class="form-control enclosureSelect">
+							    <option>1</option>
+							    <option>2</option>
+							    <option>3</option>
+							    <option>4</option>
+							  </select>
+							  <select class="form-control enclosureSelect">
+							    <option>1</option>
+							    <option>2</option>
+							    <option>3</option>
+							    <option>4</option>
+							  </select>
+	                    </div> 
+                </div>
+		                
+
+</div>
+
+
+                </form>
+            </div>
+
+                    
+
+
+
+
+            <div class="ebgBtnContainer">
+					<button type="button" class="btn btn-primary">Feedback</button>
+					<button type="button" class="btn btn-primary">Maintainence</button>
+					<button type="button" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

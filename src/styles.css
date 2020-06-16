@@ -1,0 +1,187 @@
+body{font-family: 'Roboto', sans-serif;}
+form {
+    padding: 0 1em;
+}
+.container.ebgformcontainer {
+    border: 2px solid #0b0b7b;
+    width: 60%;
+    padding: 0px;
+    margin-bottom: 3em;
+    background: #efefff;
+    border-radius: 5px;
+}
+label.col-sm-4.control-label.source {
+    margin-right: 2.2em;
+}
+a#logout {
+    border: none;
+}
+a#link1 img {
+    padding-right: 0.5em;
+}
+.form-group col-md-6 {
+    background-color: #4865af4a;
+}
+.col-sm-12 label {
+    width: 100%;
+    margin: 0.5em 0;
+}
+.col-sm-6.ebgformleftcontainer {
+    padding-right: 0px;
+}
+.col-sm-6.ebgformleftcontainer label {
+    margin-right: 2em;
+}
+.col-sm-12.ebheadinglabel label {
+    margin: 1em 0;
+}
+.col-sm-6.ebgformleftcontainer select {
+    width: 45% !important;
+}
+.col-sm-6.ebgformrightcontainer {
+    padding-left: 0px;
+}
+.col-sm-6.ebgformrightcontainer span {
+    line-height: 2em;
+    font-weight: 700;
+    padding: 0.5em;
+}
+.col-sm-6.ebgformrightcontainer button {
+    font-size: 11px;
+    padding: 5px;
+    font-weight: bold;
+}
+.col-div2 {
+    margin: 0px !important;
+    padding: 0px !important;
+    background: #0b0b7b;
+}
+select.form-control.hpSelect {
+    min-width: 10% !important;
+    margin-left: 1em;
+}
+.medblue {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+    padding: 0 0.5em;
+}
+.medblue:hover {
+    color: #fff;
+}
+img#img1 {
+    margin: 0.5em 0 0.5em 1em;
+}
+.col-md-12.speedShowContainer input[type=text] {
+    width: 100px;
+    margin-right: 0.5em;
+}
+.headerRightContainer {
+    float: right;
+    margin: 2em 1em;
+}
+label.col-sm-4.control-label {
+    text-align: left;
+    padding-left: 2em;
+}
+select {
+    width: auto !important;
+    height: 30px !important;
+    float: left;
+    min-width: 30%;
+}
+.ebgBtnContainer button {
+    margin-right: 1em;
+    font-weight: 700;
+}
+.ebgBtnContainer {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.minmaxLabels {
+    width: 100%;
+    float: left;
+    margin-bottom: 1em;
+}
+.minmaxLabels button {
+    float: left;
+    margin-left: 1em;
+}
+span.min {
+    margin-left: 1em;
+}
+.minmaxLabels span {
+    width: 100px !important;
+    float: left;
+    line-height: 2em;
+}
+.minmaxLabels span:nth-child(2) {
+    width: 25px !important;
+    padding: 0 0.5em;
+}
+span.dash {
+    padding: 0 0.5em;
+}
+.speedShowContainer input[type="radio"] {
+    float: left;
+    margin-right: 0.3em;
+    margin-top: 3px;
+}
+.minmaxLabels div {
+    float: left;
+    margin-left: 18%;
+}
+.col-md-12.frequencyNumberContainer label {
+    padding-left: 10px;
+    margin-right: 2em;
+}
+.col-md-12.frequencyNumberContainer select,.col-md-12.speedShowContainer {
+    margin-bottom: 1em;
+} 
+span.hzStyle {
+    line-height: 2em;
+    font-weight: 800;
+    padding: 0 0.5em;
+}
+.voltageContainer {
+    float: left;
+    width: 100%;
+}
+label.col-sm-4.control-label.syn {
+    margin-right: 2.5em;
+}
+select.form-control.syncSelect {
+    min-width: 46%;
+}
+.col-md-12.speedShowContainer label {
+    width: 21%;
+}
+select.form-control.sourceSlect {
+    margin-left: 0.5em;
+    width: 46% !IMPORTANT;
+}
+select.form-control.enclosureSelect {
+    min-width: 12% !important;
+    margin-right: 4%;
+}
+select.form-control.voltageSelect {
+    width: 23% !important;
+    min-width: auto !important;
+}
+footer {
+    width: 100%;
+    display: block;
+    background: #0b0b7b;
+    line-height: 3em;
+}
+footer p {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
